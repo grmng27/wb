@@ -16,7 +16,7 @@ public class CommonAction {
         if (driver == null) {
             System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
             driver = new ChromeDriver();
-            driver.manage().window();
+            driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         }
         return driver;

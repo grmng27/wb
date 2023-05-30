@@ -10,9 +10,9 @@ public class WbCardPage extends BasePage {
         super(driver);
     }
 
-    By buttonAddInBucket = By.xpath("//*[@class='order']");
-    By buttonGoToBucket = By.xpath("//*[@class='navbar-pc__item j-item-basket']");
-    By item = By.xpath("//*[@href='/catalog/43221351/detail.aspx?size=86155679']");
+    By buttonAddInBucket = By.xpath("//div[@class='product-page__aside']//span[@class='hide-mobile']");
+    By buttonGoToBucket = By.xpath("//div[@class='navbar-pc__item j-item-basket']");
+    By item = By.xpath("//div[@class='list-item__good']//a[@href='/catalog/43221351/detail.aspx?size=86155679']");
 
     public void bucketCheck() {
         driver.findElement(buttonAddInBucket).click();
